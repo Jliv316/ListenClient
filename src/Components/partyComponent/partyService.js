@@ -8,7 +8,7 @@ class PartyService extends React.Component {
   }
 
   componentDidMount() {
-    axios.post('http://localhost:3166/api/v1/party', {
+    axios.post('https://evening-river-55715.herokuapp.com/api/v1/party', {
       client_token: this.props.token
     })
       .then(response => {

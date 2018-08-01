@@ -9,7 +9,7 @@ class Playlist extends React.Component {
   }
 
   componentDidMount(){
-    axios.post('http://localhost:3166/api/v1/playlists', {
+    axios.post('https://evening-river-55715.herokuapp.com/api/v1/playlists', {
       client_token: this.props.token
     })
     .then(response => {

@@ -14,7 +14,7 @@ class Location extends Component {
   }
 
   componentDidUpdate(){
-    axios.post('http://localhost:3166/api/v1/location', {
+    axios.post('https://evening-river-55715.herokuapp.com/api/v1/location', {
       latitude: this.state.lat,
       longitude: this.state.lng,
       client_token: this.props.token
