@@ -27,6 +27,11 @@ class Party extends Component {
   }
 
   render() {
+    const tracks = this.state.tracks.map((track) => (
+      <div>
+        <h1>{track.name}</h1>
+      </div>
+    ));
     return (
       <div className="homeContainer">
         <div className="pimg1">
@@ -39,8 +44,12 @@ class Party extends Component {
 
         <section className="section section-light">
           <p>
-            <PartyButton onClick={this.handleClick} />
-            <PartyService tracks={this.state.tracks} />
+            <Button onClick={this.handleClick}>
+              Start a Party!
+             </Button>
+            <div id="layout-content" className="layout-content-wrapper">
+              <div className="panel-list">{tracks}</div>
+            </div>
           </p>
         </section>
 
