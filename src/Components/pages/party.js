@@ -39,7 +39,7 @@ class Party extends Component {
 
         <section className="section section-light">
           <p>
-            <PartyButton onClick={this.handleClick()} />
+            <PartyButton onClick={this.handleClick} />
             <PartyService tracks={this.state.tracks} />
           </p>
         </section>
