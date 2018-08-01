@@ -7,8 +7,23 @@ class Party extends Component {
   constructor(props) {
     super(props);
     const params = getQueryParams();
-    this.state = { token: params.token }
+    this.state = { 
+      token: params.token,
+      tracks: []
+     }
   }
+
+  handleClick = () => {
+    axios.post('http://localhost:3166/api/v1/party', {
+      client_token: this.props.token
+    })
+      .then(response => {
+        console.log(response)
+        this.setState({ tracks: response.data.tracks })
+      })
+      .catch(error => console.log(error))
+  }
+
   render() {
     return (
       <div className="homeContainer">
@@ -22,7 +37,8 @@ class Party extends Component {
 
         <section className="section section-light">
           <p>
-            <PartyService token={this.state.token} />
+            <PartyButton onClick={this.handleClick()} />
+            <PartyService tracks={this.state.tracks} />
           </p>
         </section>
 
