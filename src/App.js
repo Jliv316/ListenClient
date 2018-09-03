@@ -39,7 +39,7 @@ class App extends Component {
 
           {this.isLoggedIn ? <Header token={this.state.token}/> : <Header />}
 
-          <Route exact path='/' component={Main} />
+          <Route exact path='/ListenClient' component={Main} />
           <Route exact path='/Playlists' component={Playlists} />
           <Route exact path='/Party' component={Party} />
           <Route exact path='/Player' component={Player} />
