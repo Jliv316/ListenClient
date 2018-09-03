@@ -2,6 +2,7 @@
   "name": "spin_react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jliv316.github.io/ListenClient/",
   "dependencies": {
     "ajv": "^6.5.2",
     "axios": "^0.18.0",
